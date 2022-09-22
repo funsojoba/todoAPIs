@@ -3,9 +3,10 @@ from rest_framework import serializers
 from .models import Todo
 
 
-class TodoSerializers(serializers.ModelSerializers):
+class TodoSerializer(serializers.ModelSerializer):
     class Meta:
-        fields (
+        model = Todo
+        fields = (
             "id",
             "title",
             "body",
